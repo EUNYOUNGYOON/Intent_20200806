@@ -15,12 +15,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         dialBtn.setOnClickListener {
-
             val inputPhoneNum = phoneNumEdt.text.toString()
-
             // 어디에 전화를 걸지 Uri를 이용해서 정보 저장
             val myUri = Uri.parse("tel:${inputPhoneNum}")
             val myIntent = Intent(Intent.ACTION_DIAL, myUri)
+            startActivity(myIntent)
+        }
+
+        callBtn.setOnClickListener {
+            val inputPhoneNum = phoneNumEdt.text.toString()
+            val myUri = Uri.parse("tel:${inputPhoneNum}")
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
             startActivity(myIntent)
 
         }
@@ -64,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             // 닉네임 변경은 -> 확인을 눌렀을 때만 하고싶다.
             // 확인이 눌린게 맞는지 -> resultCode의 값이 RESULT_OK인지?
 
-            if(requestCode == Activity.RESULT_OK){
+            if(resultCode == Activity.RESULT_OK){
 
                 // 돌아올 때 들고온 새 닉네임 text반영
                 // data 인텐트가 -> resultIntent를 들고 있다. -> 거기(data)서 String을 뽑아내자.
