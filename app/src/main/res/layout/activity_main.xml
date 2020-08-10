@@ -9,7 +9,24 @@
     android:padding="15dp"
     tools:context=".MainActivity">
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="뭔가를 넣는"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="여기에 뭔가를 넣어라"/>
+
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="첫번째 액티비티로 이동"/>
+
+    <Button
+        android:id="@+id/changeNickNameBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="첫번째 액티비티로 이동"/>

@@ -3,11 +3,9 @@ package com.example.intent_20200806
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity() {
+class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        //changeNickNameBtn.set
+        setContentView(R.layout.activity_second)
     }
 }
