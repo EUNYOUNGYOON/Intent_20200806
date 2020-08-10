@@ -45,6 +45,23 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
         }
 
+        // 인터넷 웹 연결하기 네이버
+        naverLinkBtn.setOnClickListener {
+
+            val myUri = Uri.parse("https://www.naver.com")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
+
+        // 플레이 스토어 연결
+        kakaoPlayStoreBtn.setOnClickListener {
+
+            val myUri = Uri.parse("market://details?id=com.kakao.talk&hl=ko")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
+
+
         moveToFirstBtn.setOnClickListener {
 
             //FirstActivity로 이동 -> Intent
